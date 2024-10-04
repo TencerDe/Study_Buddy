@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
     'localhost:8000'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://studybudy.up.railway.app']
+
 
 # Application definition
 
