@@ -52,9 +52,13 @@ def registerPage(request):
 
     if request.method == 'POST':
         form = MyUserCreationForm(request.POST)
+        print(form)
         if form.is_valid():
+            print("Form is valid")
             user = form.save(commit=False)
+            print("User is created")
             user.username = user.username.lower()
+            print(user.username, user.email)
             user.save()
             login(request, user)
             return redirect('home')
